@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran - M. Denis ktafirdaus</title>
+  <!-- Google Fonts & Font Awesome untuk Ikon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+      background-attachment: fixed;
+      color: #f8fafc;
+      min-height: 100vh;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    /* Navigasi Modern */
+    nav {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 25px;
+      margin-bottom: 35px;
+      border-radius: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    }
+
+    /* Kontainer Utama dengan Efek Glassmorphism */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 i {
+      color: #60a5fa;
+    }
+
+    /* Styling Form Group */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="url"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: #ffffff;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #3b82f6;
+      background: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #64748b;
+    }
+
+    /* Radio & Checkbox Styling */
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .radio-item, .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: #e2e8f0;
+      font-size: 14px;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      accent-color: #3b82f6;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    input[type="file"] {
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    /* Tombol Aksi */
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    button[type="submit"] {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      flex: 1;
+    }
+
+    button[type="submit"]:hover {
+      background: linear-gradient(135deg, #1d4ed8, #1e40af);
+      transform: translateY(-2px);
+    }
+
+    button[type="reset"] {
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    button[type="reset"]:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Navigasi -->
+  <nav>
+    <a href="profile.html">Profile</a>
+    <a href="about-me.html">About Me</a>
+    <a href="educations.html">Educations</a>
+    <a href="course-schedule.html">Course Schedule</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="form.html" class="active">Form</a>
+    <a href="table1.html">Table 1</a>
+    <a href="table2.html">Table 2</a>
+  </nav>
+
+  <div class="container">
+    <h2><i class="fa-solid fa-wpforms"></i> Formulir Pendaftaran</h2>
+
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="nama@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••">
+      </div>
+
+      <div class="form-group">
+        <label for="umur">Umur</label>
+        <input type="number" id="umur" name="umur" placeholder="Masukkan umur">
+      </div>
+
+      <div class="form-group">
+        <label for="tgl_lahir">Tanggal Lahir</label>
+        <input type="date" id="tgl_lahir" name="tgl_lahir">
+      </div>
+
+      <div class="form-group">
+        <label>Jenis Kelamin</label>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" id="laki" name="jk" value="Laki-laki"> Laki-laki
+          </label>
+          <label class="radio-item">
+            <input type="radio" id="perempuan" name="jk" value="Perempuan"> Perempuan
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Hobi</label>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="coding" name="hobi[]" value="Coding"> Coding
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="gaming" name="hobi[]" value="Gaming"> Gaming
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="olahraga" name="hobi[]" value="Olahraga"> Olahraga
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="jurusan">Jurusan</label>
+        <select id="jurusan" name="jurusan">
+          <option value="">-- Pilih Jurusan --</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" rows="4" placeholder="Masukkan alamat"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="foto">Foto</label>
+        <input type="file" id="foto" name="foto">
+      </div>
+
+      <div class="form-group">
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+      </div>
+
+      <div class="btn-group">
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

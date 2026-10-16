@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Perkuliahan Semester 1 - M. Denis Oktafirdaus</title>
+  <!-- Google Fonts & Font Awesome untuk Ikon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+      background-attachment: fixed;
+      color: #f8fafc;
+      min-height: 100vh;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    /* Navigasi Modern */
+    nav {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 25px;
+      margin-bottom: 35px;
+      border-radius: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    }
+
+    /* Kontainer Utama dengan Efek Glassmorphism */
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 i {
+      color: #60a5fa;
+    }
+
+    /* Styling Tabel Modern */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      background: rgba(15, 23, 42, 0.5);
+    }
+
+    th, td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    th {
+      background: rgba(30, 58, 138, 0.6);
+      color: #ffffff;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Rata kiri khusus untuk Nama Mata Kuliah agar rapi */
+    td:nth-child(4) {
+      text-align: left;
+    }
+
+    tfoot td {
+      background: rgba(30, 58, 138, 0.4);
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(37, 99, 235, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Navigasi -->
+  <nav>
+    <a href="profile.html">Profile</a>
+    <a href="about-me.html">About Me</a>
+    <a href="educations.html">Educations</a>
+    <a href="course-schedule.html">Course Schedule</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="form.html">Form</a>
+    <a href="table1.html" class="active">Table 1</a>
+    <a href="table2.html">Table 2</a>
+  </nav>
+
+  <div class="container">
+    <h2><i class="fa-solid fa-table-list"></i> Jadwal Perkuliahan Semester 1</h2>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Hari</th>
+            <th>Jam</th>
+            <th>Kode</th>
+            <th>Nama Mata Kuliah</th>
+            <th>Ruangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">Senin</td>
+            <td>08:00 - 10:00</td>
+            <td>IF101</td>
+            <td>Pemrograman Web</td>
+            <td>Lab 1</td>
+          </tr>
+          <tr>
+            <td>10:00 - 12:00</td>
+            <td>IF102</td>
+            <td>Basis Data</td>
+            <td>Lab 2</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Selasa</td>
+            <td>08:00 - 10:00</td>
+            <td>IF103</td>
+            <td>Algoritma</td>
+            <td>Ruang 201</td>
+          </tr>
+          <tr>
+            <td>10:00 - 12:00</td>
+            <td>IF104</td>
+            <td>Sistem Operasi</td>
+            <td>Ruang 202</td>
+          </tr>
+          <tr>
+            <td>13:00 - 15:00</td>
+            <td>IF105</td>
+            <td>Jaringan Komputer</td>
+            <td>Lab 3</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Rabu</td>
+            <td>08:00 - 10:00</td>
+            <td>IF106</td>
+            <td>Pemrograman Mobile</td>
+            <td>Lab 4</td>
+          </tr>
+          <tr>
+            <td>10:00 - 12:00</td>
+            <td>IF107</td>
+            <td>Rekayasa Perangkat Lunak</td>
+            <td>Ruang 203</td>
+          </tr>
+          <tr>
+            <td>Kamis</td>
+            <td colspan="3">Kegiatan Akademik / Seminar</td>
+            <td>Aula</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total Mata Kuliah</td>
+            <td colspan="3">7 Mata Kuliah</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

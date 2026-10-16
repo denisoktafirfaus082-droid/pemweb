@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - M. Rafli Adil Fadilah</title>
+  <!-- Google Fonts & Font Awesome untuk Ikon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+      background-attachment: fixed;
+      color: #f8fafc;
+      min-height: 100vh;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    /* Navigasi Modern */
+    nav {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 25px;
+      margin-bottom: 35px;
+      border-radius: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      box-shadow: 0 4px 12px rgba(37, 99, 235,.4);
+    }
+
+    /* Kontainer Utama dengan Efek Glassmorphism */
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 i {
+      color: #60a5fa;
+    }
+
+    .bio-text {
+      font-size: 16px;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: #93c5fd;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Grid untuk Teknologi */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .tech-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 500;
+      color: #e2e8f0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .tech-item:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+      background: rgba(37, 99, 235, 0.2);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    /* List Target Belajar */
+    .target-list {
+      list-style: none;
+      counter-reset: target-counter;
+    }
+
+    .target-list li {
+      counter-increment: target-counter;
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 12px 18px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #e2e8f0;
+      transition: background 0.3s ease;
+    }
+
+    .target-list li:hover {
+      background: rgba(30, 58, 138, 0.4);
+    }
+
+    .target-list li::before {
+      content: counter(target-counter);
+      background: #3b82f6;
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Navigasi -->
+  <nav>
+    <a href="profile.html">Profile</a>
+    <a href="about-me.html" class="active">About Me</a>
+    <a href="educations.html">Educations</a>
+    <a href="course-schedule.html">Course Schedule</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="form.html">Form</a>
+    <a href="table1.html">Table 1</a>
+    <a href="table2.html">Table 2</a>
+  </nav>
+
+  <div class="container">
+    <h2><i class="fa-solid fa-user-astronaut"></i> Tentang Saya</h2>
+    <p class="bio-text">
+      Halo! Saya memiliki ketertarikan yang besar pada pengembangan aplikasi web. Saat ini saya sedang mendalami dan belajar membuat halaman web yang interaktif, responsif, serta estetis menggunakan berbagai teknologi modern.
+    </p>
+
+    <h3><i class="fa-solid fa-code"></i> Teknologi yang Sedang Dipelajari</h3>
+    <div class="tech-grid">
+      <div class="tech-item"><i class="fa-brands fa-html5 text-orange-400"></i> HTML</div>
+      <div class="tech-item"><i class="fa-brands fa-css3-alt text-blue-400"></i> CSS</div>
+      <div class="tech-item"><i class="fa-brands fa-js text-yellow-400"></i> JavaScript</div>
+      <div class="tech-item"><i class="fa-brands fa-php text-indigo-400"></i> PHP</div>
+      <div class="tech-item"><i class="fa-solid fa-database text-cyan-400"></i> MySQL</div>
+    </div>
+
+    <h3><i class="fa-solid fa-bullseye"></i> Target Belajar</h3>
+    <ul class="target-list">
+      <li>Memahami struktur dan elemen dasar HTML</li>
+      <li>Menguasai tata letak dan desain CSS modern</li>
+      <li>Mempelajari logika dasar JavaScript untuk interaksi web</li>
+      <li>Mampu merancang dan membangun proyek website portofolio sendiri</li>
+    </ul>
+  </div>
+
+</body>
+</html>

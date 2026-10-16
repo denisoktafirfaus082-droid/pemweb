@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Muhamad Denis Oktafirdaus</title>
+  <!-- Google Fonts & Font Awesome untuk Ikon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+      background-attachment: fixed;
+      color: #f8fafc;
+      min-height: 100vh;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    /* Navigasi Modern */
+    nav {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 25px;
+      margin-bottom: 35px;
+      border-radius: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    }
+
+    /* Kontainer Utama dengan Efek Glassmorphism */
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 15px;
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h2 i {
+      color: #60a5fa;
+    }
+
+    p {
+      color: #cbd5e1;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    /* Foto Profil */
+    .foto-profil {
+      width: 150px;
+      height: 150px;
+      border-radius: 12px; /* Kotak dengan sudut melengkung */
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Highlight Target */
+    .highlight-target {
+      background: rgba(59, 130, 246, 0.2);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #93c5fd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Navigasi -->
+  <nav>
+    <a href="profile.html" class="active">Profile</a>
+    <a href="about-me.html">About Me</a>
+    <a href="educations.html">Educations</a>
+    <a href="course-schedule.html">Course Schedule</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="form.html">Form</a>
+    <a href="table1.html">Table 1</a>
+    <a href="table2.html">Table 2</a>
+     <a href="table3.html">Table 3</a>
+  </nav>
+
+  <div class="container">
+    <h2><i class="fa-solid fa-user"></i> Data Diri</h2>
+    
+    <!-- Pastikan file foto.jpeg berada di folder yang sama atau sesuaikan path-nya -->
+    <img src="foto.jpeg" alt="foto Muhamad Denis Oktafirdaus" class="foto-profil">
+
+    <p>Nama saya Muhamad Denis Oktafirdaus. Saya adalah mahasiswa Sistem Informasi.</p>
+    <p>Saya sedang mempelajari HTML, CSS, dan JavaScript.</p>
+    <p>Target saya adalah menjadi <span class="highlight-target">Business Man</span>.</p>
+
+    <h2><i class="fa-solid fa-circle-info"></i> Tentang Saya</h2>
+    <p>Saya memiliki ketertarikan pada pengembangan aplikasi web. Saat ini saya sedang belajar membuat halaman web menggunakan HTML.</p>
+  </div>
+
+</body>
+</html>
